@@ -3,7 +3,6 @@ import tkinter as tk
 import math
 import time
 
-# print (dir(math))
 
 root = tk.Tk()
 fr = tk.Frame(root)
@@ -71,8 +70,10 @@ class Ball():
         Returns:
             Возвращает True в случае столкновения мяча и цели. В противном случае возвращает False.
         """
-        # FIXME
-            #return False
+        if (obj.x-self.x)**2 + (obj.y-self.y)**2 < (self.r+obj.r)**2:
+	    return True
+	else:
+	    return False
 
 
 class Gun():
